@@ -1,3 +1,6 @@
 ---
-- name: Install CUDNN package
-  apt: "deb={{ cudnn_installer.deb }} state=present update_cache=yes"
+- name: Install CUDNN runtime library
+  apt: "deb={{ cudnn_runtime_installer.deb }} state=present update_cache=yes"
+
+- name: Install CUDNN developer library
+  apt: "deb={{ cudnn_developer_installer.deb }} state=present update_cache=yes"
