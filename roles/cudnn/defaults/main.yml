@@ -1,8 +1,10 @@
 ---
 cuda_version_major: 9
-cuda_version_minor: 1
+cuda_version_minor: 2
 cuda_version_str: "v{{ cuda_version_major }}.{{ cuda_version_minor }}"
 cuda_version_linux: "cuda-{{ cuda_version_major}}-{{ cuda_version_minor}}"
 
-cudnn_version: 7.0
-cudnn_version_str: "v{{ cudnn_version }}"
+cudnn_version_major: 7
+cudnn_version_minor: 1
+cudnn_run_version_str: "v{{ cudnn_version_major }}.{{ cudnn_version_minor }}"
+cudnn_dev_version_str: "{{ cudnn_run_version_str }}-dev"
