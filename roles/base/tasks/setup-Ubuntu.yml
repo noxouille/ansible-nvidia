@@ -4,32 +4,19 @@
     upgrade: yes
     update_cache: yes
 
-- name: Install python3-pip
-  apt:
-    name: python3-pip
-    state: present
+- name: Install essential packages
+  apt: name={{item}} state=present
+  with_items:
+    - python3-pip
+    - htop
+    - tmux
+    - vim
+    - curl
+    - wget
+    - git
+    - unzip
 
 - name: Install docker-py
   pip:
     name: docker-py
-    state: present
-
-- name: Install git
-  apt:
-    name: git
-    state: present
-
-- name: Install htop
-  apt:
-    name: htop
-    state: present
-
-- name: Install tmux
-  apt:
-    name: tmux
-    state: present
-
-- name: Install unzip
-  apt:
-    name: unzip
     state: present
