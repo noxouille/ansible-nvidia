@@ -15,3 +15,13 @@ locales_default:
   lc_all: en_US.UTF-8
   lc_ctype: en_US.UTF-8
   language: en_US.UTF-8
+
+essential_packages:
+  - python3-pip
+  - htop
+  - tmux
+  - vim
+  - curl
+  - wget
+  - git
+  - unzip

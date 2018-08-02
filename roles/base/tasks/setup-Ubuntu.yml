@@ -6,15 +6,7 @@
 
 - name: Install essential packages
   apt: name={{item}} state=present
-  with_items:
-    - python3-pip
-    - htop
-    - tmux
-    - vim
-    - curl
-    - wget
-    - git
-    - unzip
+  with_items: "{{ essential_packages }}"
 
 - name: Install docker-py
   pip:
