@@ -61,3 +61,22 @@ ssh-copy-id  root@192.168.1.2
 ```
 ansible-playbook gpus.yml
 ```
+
+P.S.: Those seems to work only for unattended Ubuntu installation. For manual Ubuntu Installation, use the following command:
+
+```
+ansible-playbook gpus.yml --ask-become-pass 
+```
+
+To avoid "ssh is unreachable" error, set the hosts files as follows:
+
+```
+[gpus:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_connection=ssh
+ansible_user=ask
+ansible_pass=asdasd
+
+[gpus]
+192.168.1.2
+```
