@@ -1,2 +1,11 @@
 ---
 - import_tasks: configure-common.yml
+
+#  TODO: Consider this for Regular Ubuntu install for a specific user
+#  For unattended Ubuntu install, these are not necessary for root users.
+# 
+#- name: Add the connected user "$USER" to the docker group
+#  shell: sudo gpasswd -a $USER docker
+
+#- name: Add the connected user "$USER" to the docker group
+#  shell: newgrp docker
