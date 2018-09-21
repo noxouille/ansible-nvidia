@@ -62,7 +62,7 @@ ssh-copy-id  root@192.168.1.2
 ansible-playbook gpus.yml
 ```
 
-P.S.: Those seems to work only for unattended Ubuntu installation. For manual Ubuntu Installation, use the following command:
+P.S.: Those seems to work only for [unattended Ubuntu installation](https://github.com/noxouille/linux-unattended-installation). For manual Ubuntu Installation, use the following command:
 
 ```
 ansible-playbook gpus.yml --ask-become-pass 
